@@ -44,19 +44,18 @@ const Onboarding = ({navigation, route}) => {
   useEffect(() => {
     currentIndex < 2 ? setFlowComplete(false) : setFlowComplete(true);
 
-    let scrollTimeoutId = setTimeout(() => {
-      if (currentIndex < 2) {
-        goNext();
-        // setFlowComplete(false);
-      }
-      if (currentIndex === 2) {
-        // setFlowComplete(true);
-      }
-    }, carouselDuration);
+    // let scrollTimeoutId = setTimeout(() => {
+    //   if (currentIndex < 2) {
+    //     goNext();
 
-    return () => {
-      clearTimeout(scrollTimeoutId);
-    };
+    //   }
+    //   if (currentIndex === 2) {
+    //   }
+    // }, carouselDuration);
+
+    // return () => {
+    //   clearTimeout(scrollTimeoutId);
+    // };
   }, [currentIndex]);
 
   return (
